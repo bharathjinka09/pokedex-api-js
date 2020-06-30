@@ -13,12 +13,17 @@ const apiUrl = `${url}${type}/${id}`
 const generateHtml = (data) => {
     console.log(data)
     const html = `
-        <div class="name">${data.name}</div>
-        <img src=${data.sprites.front_default}>
-        <div class="details">
-            <span>Height: ${data.height}</span>
-            <span>Weight: ${data.weight}</span>
+    <div class="card border-success mb-3" style="width: 18rem;">
+
+        <img width='100%;' src=${data.sprites.front_default} class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">${data.name}</h5>
+            <div class="card-text">
+                <span>Height: ${data.height}</span>
+                <span>Weight: ${data.weight}</span>
+            </div>
         </div>
+    </div>
     `
     const pokemonDiv = document.querySelector('.pokemon');
     console.log(pokemonDiv);
