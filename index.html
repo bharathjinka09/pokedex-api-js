@@ -5,12 +5,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="app.js"></script>
 </head>
 <body class="bg-info">
-	<h2 class="text-center text-white">Pokedex</h2>
+	<h2 class="text-center text-white mt-3">Pokedex</h2>
 	<div class="container">
+		
+		<input id="pokemon" class="form-control" type="text" name="pokemon" placeholder="Enter pokemon name"><br>
+		<input onclick="pokemon();" class="btn btn-success" type="submit" name="submit" value="Search">
+		<br><br>
 		<div class="pokemon"></div>
 	</div>
+	<script src="app.js"></script>
+
 </body>
 </html>
