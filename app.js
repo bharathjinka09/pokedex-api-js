@@ -2,12 +2,12 @@
 function pokemon() {
 
     let pokemon = document.querySelector('input').value;
-    console.log('pokemon'+pokemon)
+    console.log(pokemon)
 
     const apiData = {
         url: 'https://pokeapi.co/api/v2/',
         type: 'pokemon',
-        name: pokemon,
+        name: pokemon.toLowerCase(),
     }
 
     const {url, type, name} = apiData
@@ -20,9 +20,9 @@ function pokemon() {
         const html = `
         <div class="card border-success mb-3" style="width: 18rem;">
 
-            <img width='100%;' src=${data.sprites.front_default} class="card-img-top">
+            <img width=100 src=${data.sprites.front_default} class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">${data.name}</h5>
+                <h5 class="card-title"><b>${data.name.toUpperCase()}<b></h5>
                 <div class="card-text">
                     <span><b>Height:</b> ${data.height}</span>,
                     <span><b>Weight:</b> ${data.weight}</span><br>
